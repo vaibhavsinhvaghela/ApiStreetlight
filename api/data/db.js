@@ -1,5 +1,5 @@
 var mongoose= require("mongoose");
-var dburl="mongodb://localhost:27017/Streetlight";
+var dburl="mongodb://vbv:root@ec2-54-172-125-128.compute-1.amazonaws.com:27017/Streetlight";
 mongoose.connect(dburl);
 
 // CONNECTION EVENTS
