@@ -67,12 +67,13 @@ var runGeoQuery = function(req,res){
         res
           .status(200)
           .json(results);
+	 
           //call arduino's api with targetBrightness variable sent to it!
       }
     });
 }
 
-app.post("/userPhoneDetails",function(req,res){
+app.get("/userPhoneDetails",function(req,res){
 
 if (req.query && req.query.lat && req.query.lng && req.query.intensity) {
     runGeoQuery(req, res);
