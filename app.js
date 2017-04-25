@@ -73,6 +73,17 @@ var runGeoQuery = function(req,res){
     });
 }
 
+app.post("/userPhoneDetails",function(req,res){
+
+if (req.query && req.query.lat && req.query.lng && req.query.intensity) {
+    runGeoQuery(req, res);
+    return;
+  }else {
+  	console.log("lat, lng, and intensity fields are must.");
+  }
+
+});
+
 app.get("/userPhoneDetails",function(req,res){
 
 if (req.query && req.query.lat && req.query.lng && req.query.intensity) {
